@@ -7,7 +7,7 @@ WORKDIR /usr/src/sscord
 RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
-EXPOSE 8080
+EXPOSE 8000
 
 # Gerekli bağımlılıkları kopyala ve kur
 COPY requirements.txt ./
