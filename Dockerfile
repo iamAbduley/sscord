@@ -1,7 +1,14 @@
 # Python için resmi Docker görüntüsünü kullanın
 FROM python:3.11.1-alpine
 
+
+
 RUN pip install --upgrade pip
+
+# Sanal ortam oluşturun ve etkinleştirin
+RUN python -m venv venv
+RUN /bin/bash -c ". venv/bin/activate"
+
 RUN adduser -D myuser
 USER myuser
 
@@ -11,9 +18,7 @@ COPY . /sscord
 
 
 EXPOSE 8080
-# Sanal ortam oluşturun ve etkinleştirin
-RUN python -m venv venv
-RUN /bin/bash -c ". venv/bin/activate"
+
 
 RUN pip install --no-cache-dir -r requirements.txt
 
