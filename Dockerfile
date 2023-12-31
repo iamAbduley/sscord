@@ -1,5 +1,5 @@
 # Resmi Python görüntüsünü kullan
-FROM python:3.11.
+FROM python:3.11.1
 
 # Docker içinde çalışma dizini oluştur
 WORKDIR /usr/src/sscord
