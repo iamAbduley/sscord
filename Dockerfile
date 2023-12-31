@@ -1,12 +1,12 @@
 # Python için resmi Docker görüntüsünü kullanın
-FROM python:3.11
+FROM python:3.11.1
 
 # Çalışma dizini oluşturun ve Docker içinde kodunuzu kopyalayın
 WORKDIR /sscord
 COPY . /sscord
 
 
-EXPOSE 5000
+EXPOSE 8080
 # Sanal ortam oluşturun ve etkinleştirin
 RUN python -m venv venv
 RUN /bin/bash -c "source venv/bin/activate"
