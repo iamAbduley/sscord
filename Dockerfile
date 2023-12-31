@@ -13,7 +13,7 @@ COPY . /sscord
 EXPOSE 8080
 # Sanal ortam oluşturun ve etkinleştirin
 RUN python -m venv venv
-RUN /bin/bash -c "source venv/bin/activate"
+RUN /bin/bash -c ". venv/bin/activate"
 
 RUN pip install --no-cache-dir -r requirements.txt
 
