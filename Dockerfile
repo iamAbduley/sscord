@@ -7,7 +7,7 @@ RUN pip install --upgrade pip
 
 # Sanal ortam oluşturun ve etkinleştirin
 RUN python -m venv venv
-RUN /bin/bash -c "source venv/bin/activate"
+RUN /bin/sh -c "source venv/bin/activate"
 
 RUN adduser -D myuser
 USER myuser
