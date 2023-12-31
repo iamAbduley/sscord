@@ -4,9 +4,6 @@ FROM python:3.11.1
 # Docker içinde çalışma dizini oluştur
 WORKDIR /usr/src/sscord
 
-RUN python -m venv myenv
-RUN source myenv/bin/activate
-
 RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
