@@ -5,6 +5,10 @@ FROM python:3.11
 WORKDIR /sscord
 COPY . /sscord
 
+# Sanal ortam oluşturun ve etkinleştirin
+RUN python -m venv venv
+RUN /bin/bash -c "source venv/bin/activate"
+
 # Gerekli paketleri yükleyin
 RUN pip install --no-cache-dir -r requirements.txt
 
