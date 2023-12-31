@@ -1,5 +1,9 @@
 # Python için resmi Docker görüntüsünü kullanın
-FROM python:3.11.1
+FROM python:3.11.1-alpine
+
+RUN pip install --upgrade pip
+RUN adduser -D myuser
+USER myuser
 
 # Çalışma dizini oluşturun ve Docker içinde kodunuzu kopyalayın
 WORKDIR /sscord
