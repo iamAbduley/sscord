@@ -9,6 +9,7 @@ COPY . /sscord
 RUN python -m venv venv
 RUN /bin/bash -c "source venv/bin/activate"
 
+EXPOSE 5000
 # Gerekli paketleri yükleyin
 RUN pip install --no-cache-dir -r requirements.txt
 
