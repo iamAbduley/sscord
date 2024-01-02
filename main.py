@@ -14,6 +14,9 @@ class MyBot(commands.Bot):
         super().__init__(
             command_prefix = prefixes,
             intents = discord.Intents.all(),
+            activity = discord.Streaming(
+                name="??ss | Take A Screenshot",
+                url="https://www.twitch.tv/iamabduley"),
             application_id = 1190016167826440293)
         
         self.initial_extensions = ["utils.error_handler"]
