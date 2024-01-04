@@ -7,6 +7,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello():
+    return 'Hello, World!'
+
 load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
 
