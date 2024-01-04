@@ -3,6 +3,9 @@ import discord
 import os
 from discord.ext import commands
 from dotenv import load_dotenv
+from flask import Flask
+
+app = Flask(__name__)
 
 load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
@@ -50,3 +53,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+    app.run(host='0.0.0.0', port=8080)
